@@ -5,7 +5,7 @@ import logo from "../imgs/topbar_logo.png";
 const LoggedOutView = (props) => {
   if (!props.currentUser) {
     return (
-      <ul className="navbar-nav ml-auto">
+      <ul className="navbar-nav ">
         <li className="nav-item">
           <Link to="/login" className="nav-link">
             Sign in
@@ -26,7 +26,7 @@ const LoggedOutView = (props) => {
 const LoggedInView = (props) => {
   if (props.currentUser) {
     return (
-      <ul className="navbar-nav ml-auto">
+      <ul className="navbar-nav mx-auto mx-md-0 ml-md-auto">
         <li className="nav-item">
           <Link to="/editor" className="nav-link">
             <i className="ion-compose"></i>&nbsp;New Item
@@ -63,7 +63,7 @@ class Header extends React.Component {
         className="navbar navbar-expand-md navbar-dark"
         style={{ padding: "0.5rem 2rem" }}
       >
-        <Link to="/" className="navbar-brand">
+        <Link to="/" className="navbar-brand mx-auto mx-md-0">
           <img alt="logo" src={logo} />
         </Link>
 
