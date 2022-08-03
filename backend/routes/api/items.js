@@ -190,6 +190,11 @@ router.put("/:item", auth.required, function(req, res, next) {
         req.item.tagList = req.body.item.tagList;
       }
 
+      if (typeof req.query.title !== "undefined") {
+        var regex = new RegExp( req.query.title, "i");
+        query.title = regex;
+      }
+
       req.item
         .save()
         .then(function(item) {
