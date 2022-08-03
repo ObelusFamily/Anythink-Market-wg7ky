@@ -53,6 +53,13 @@ router.get("/", auth.optional, function(req, res, next) {
     query.tagList = { $in: [req.query.tag] };
   }
 
+  if (typeof req.query.title !== "undefined") {
+    const string= req.query.title.trim();
+    const regex = new RegExp(["^", string , "$"].join(""), "i");
+    query.title = regex;
+  }
+
+
   Promise.all([
     req.query.seller ? User.findOne({ username: req.query.seller }) : null,
     req.query.favorited ? User.findOne({ username: req.query.favorited }) : null
