@@ -59,3 +59,13 @@ body {
 .user-info {
   min-width: 800px;
 }
+
+#search-box{
+  border:none;
+  outline: none;
+}
+
+#search-box:focus{
+  border:none;
+  outline: none;
+}
