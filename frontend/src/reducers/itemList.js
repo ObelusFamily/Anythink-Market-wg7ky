@@ -7,7 +7,6 @@ import {
   HOME_PAGE_LOADED,
   HOME_PAGE_UNLOADED,
   CHANGE_TAB,
-  
   PROFILE_PAGE_LOADED,
   PROFILE_PAGE_UNLOADED,
   PROFILE_FAVORITES_PAGE_LOADED,
@@ -57,8 +56,7 @@ const reducer = (state = {}, action) => {
         tab: null,
         title: action.title,
         currentPage: 0,
-
-      }   
+      };
     case HOME_PAGE_LOADED:
       return {
         ...state,
