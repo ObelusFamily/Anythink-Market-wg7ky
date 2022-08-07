@@ -36,6 +36,8 @@ router.put("/user", auth.required, function(req, res, next) {
       }
       if (typeof req.body.user.image !== "undefined") {
         user.image = req.body.user.image;
+      }else{
+        user.image= "placeholder.png"
       }
       if (typeof req.body.user.password !== "undefined") {
         user.setPassword(req.body.user.password);
