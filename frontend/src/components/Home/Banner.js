@@ -27,14 +27,14 @@ const Banner = (props) => {
               get
             </text>
           </span>
-          {clicked && 
+          {clicked && (
             <input
               id="search-box"
               className="rounded mx-4 px-4 py-2 w-50"
               placeholder="What is it that you truly desire?"
               onChange={(e) => setSearchInput(e.target.value)}
             />
-          }
+          )}
           <span> the cool stuff.</span>
         </div>
       </div>
