@@ -23,7 +23,7 @@ const Banner = (props) => {
         <div>
           <span id="get-part">
             A place to{" "}
-            <button id="search-btn" onClick={() => setClicked(!clicked)}>
+            <button id="search-btn" onClick={() => setClicked(true)}>
               get
             </button>
           </span>
