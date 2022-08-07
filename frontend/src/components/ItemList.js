@@ -13,7 +13,7 @@ const ItemList = (props) => {
     return (
       <div className="d-flex align-items-center justify-content-center">
         <div className="p-4 no-items text-center w-50 m-2" id="empty">
-          No items are found for "<strong>{props.searchtag}</strong>" yet.
+          No items found for "<strong>{props.searchtag}</strong>".
         </div>
       </div>
     );
