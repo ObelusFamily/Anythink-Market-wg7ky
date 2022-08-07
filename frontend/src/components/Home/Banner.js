@@ -9,7 +9,7 @@ const Banner = (props) => {
   const searchbyTitle = (searchvalue) => {
     setSearchInput(searchvalue);
 
-    if (searchInput.length >= 3) {
+    if (searchInput.length > 3) {
       console.log("hey this is" + searchvalue);
       props.onClickTitle(
         searchInput,
