@@ -1,6 +1,7 @@
 require("dotenv").config();
 var http = require("http"),
   path = require("path"),
+  newrelic=require("newrelic")
   methods = require("methods"),
   express = require("express"),
   bodyParser = require("body-parser"),
@@ -12,6 +13,10 @@ var http = require("http"),
 
 var isProduction = process.env.NODE_ENV === "production";
 
+newrelic.instrumentLoadedModule(
+  'express',   
+  express 
+);
 // Create global app object
 var app = express();
 
