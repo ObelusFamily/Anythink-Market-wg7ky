@@ -16,7 +16,12 @@ const connectedToDatabase = () => {
 
 async function main() {
   connectedToDatabase();
-  for (let i = 0; i < 100; i++) {
+  await User.deleteMany();
+  await Item.deleteMany();
+  await Comment.deleteMany();
+
+
+  for (let i =0; i < 100; i++) {
     const user = new User();
     user.username = `user${i}`;
     user.email = `user${i}@gmail.com`;
